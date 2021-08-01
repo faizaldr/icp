@@ -2,10 +2,10 @@
     Langkah Perisapan :
     <ol>
         <li>
-            1. php artisan migrate --seed
+            php artisan migrate --seed
         </li>
         <li>
-            2. php artisan serve
+           php artisan serve
         </li>
     </ol>  
 </b>
