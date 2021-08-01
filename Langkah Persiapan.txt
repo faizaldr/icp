@@ -1,0 +1,2 @@
+1. php artisan migrate --seed
+2. php artisan serve
