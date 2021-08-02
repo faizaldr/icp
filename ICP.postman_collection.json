@@ -1,0 +1,448 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ICP",
+		"_postman_id": "9040e05a-2a16-1bcc-f6a6-2574ca4579bd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pengguna",
+			"description": "",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"url": "{{url}}/pengguna/login",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wsmitham@haley.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tampil semua",
+					"request": {
+						"url": "{{url}}/pengguna/tampil",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wsmitham@haley.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tampil cari",
+					"request": {
+						"url": "{{url}}/pengguna/tampil",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "rita",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tambah",
+					"request": {
+						"url": "{{url}}/pengguna/tambah",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "f@a.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "nama",
+									"value": "faizal",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alamat",
+									"value": "jogja",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "konfirmasi_password",
+									"value": "123123123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ubah",
+					"request": {
+						"url": "{{url}}/pengguna/ubah",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "faizal@a.com",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "nama",
+									"value": "faizal",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "alamat",
+									"value": "jogja",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "konfirmasi_password",
+									"value": "123123123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "hapus",
+					"request": {
+						"url": "{{url}}/pengguna/hapus",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "6",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "artikel",
+			"description": "",
+			"item": [
+				{
+					"name": "tampil semua",
+					"request": {
+						"url": "{{url}}/artikel/tampil",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "wsmitham@haley.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tampil cari",
+					"request": {
+						"url": "{{url}}/artikel/tampil",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isi",
+									"value": "persons",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "judul",
+									"value": "baru",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "tambah",
+					"request": {
+						"url": "{{url}}/artikel/tambah",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "judul",
+									"value": "judul artikel baru",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "isi",
+									"value": "isi artikel baru",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "ubah",
+					"request": {
+						"url": "{{url}}/artikel/ubah",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "judul",
+									"value": "Judul Artikel baru berubah",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "isi",
+									"value": "Isi Artikel baru berubah",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "hapus",
+					"request": {
+						"url": "{{url}}/artikel/hapus",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "51",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
